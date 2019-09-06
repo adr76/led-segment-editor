@@ -219,8 +219,18 @@ $(function () {
     $cols = $('#cols-list');
     $rows = $('#rows-list');
     $leds = $('#leds-matrix');
+    
+    //$leds = $('#leds-matrix', '.seven-segment');
+    
+    $seven = $('.seven-segment');
+    //$seven-cols = $('.seven-segment');
+    //$seven-rows = $('.seven-segment');
 
     $leds.find('.item').mousedown(function () {
+        $(this).toggleClass('active');
+        ledsToHex();
+    });
+    $seven.find('.item').mousedown(function () {
         $(this).toggleClass('active');
         ledsToHex();
     });
@@ -289,6 +299,8 @@ $(function () {
             $leds.find('.item[data-row=' + row + '].active').length != 8);
         ledsToHex();
     });
+    
+    //-- seven
 
     $hexInput.keyup(function () {
         hexInputToLeds();

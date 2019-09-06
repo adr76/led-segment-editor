@@ -1,0 +1,318 @@
+
+.center-block {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 800px;
+    height: 120px;
+}
+
+.pixel {
+    font-size: 8;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.seven {
+display: block;
+    position: absolute;
+    bottom: 5px;
+    left: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 8px;
+    width: 900px;
+    /* height: 160px; */
+    /* border: 6px solid #484848; */
+    background-color: rgba(0,0,0,.5);
+    transform: scale(0.3);
+}
+
+.seven-segment {
+    position: relative;
+    height: 232px;
+    width: 132px;
+    display: inline-block;
+    /* border: 1px solid #cccccc; */
+    /* margin: 1px; */
+    margin-left: 10px;
+    margin-right: 60px;
+    /* transform: scale(0.5); */
+}
+
+.seven-segment .a {
+    position: absolute;
+    left: 10px;
+    height: 0;
+    width: 110px;
+    border-top: 30px solid #cccccc;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+}
+.seven-segment .a.active {
+    border-top-color: #f28484;
+}
+
+.seven-segment .b {
+    position: absolute;
+    left: 100px;
+    top: 10px;
+    height: 100px;
+    width: 0;
+    border-right: 30px solid #cccccc;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+}
+.seven-segment .b.active {
+    border-right-color: #f28484;
+}
+
+.seven-segment .c {
+    position: absolute;
+    left: 100px;
+    top: 120px;
+    height: 100px;
+    width: 0;
+    border-right: 30px solid #cccccc;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+}
+.seven-segment .c.active {
+    border-right-color: #f28484;
+}
+
+.seven-segment .d {
+    position: absolute;
+    top: 200px;
+    left: 10px;
+    height: 0;
+    width: 110px;
+    border-bottom: 30px solid #cccccc;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+}
+.seven-segment .d.active {
+    border-bottom-color: #f28484;
+}
+
+.seven-segment .e {
+    position: absolute;
+    left: 0;
+    top: 120px;
+    height: 100px;
+    width: 0;
+    border-left: 30px solid #cccccc;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+}
+.seven-segment .e.active {
+    border-left-color: #f28484;
+}
+
+.seven-segment .f {
+    position: absolute;
+    left: 0;
+    top: 10px;
+    height: 100px;
+    width: 0;
+    border-left: 30px solid #cccccc;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+}
+.seven-segment .f.active {
+    border-left-color: #f28484;
+}
+
+.seven-segment .g {
+    position: absolute;
+    top: 100px;
+    left: 25px;
+    -webkit-transform: scale(1.4);
+    -moz-transform: scale(1.4);
+    -ms-transform: scale(1.4);
+    -o-transform: scale(1.4);
+    transform: scale(1.4);
+}
+.seven-segment .g .top {
+    height: 0;
+    width: 80px;
+    border-bottom: 15px solid #cccccc;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.seven-segment .g .bottom {
+    height: 0;
+    width: 80px;
+    border-top: 15px solid #cccccc;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+}
+.seven-segment .g.active .top {
+    border-bottom-color: #f28484;
+}
+.seven-segment .g.active .bottom {
+    border-top-color: #f28484;
+}
+
+.seven-segment .dp {
+    position: absolute;
+    left: 150px;
+    top: 200px;
+    height: 30px;
+    width: 30px;
+    background-color: #cccccc;
+    border-radius: 15px;
+}
+.seven-segment .dp.active {
+    background-color: #f28484;
+}
+
+.symbol {
+    overflow: hidden;
+    position: relative;
+    margin: 2px;
+    padding: 0px;
+    border: 1px solid #ccc;
+    width: 57px;
+    height: 92px;
+    float: left;
+}
+
+.seven-segment-small {
+    position: relative;
+    height: 232px;
+    width: 132px;
+    display: inline-block;
+}
+
+.seven-segment-small .a {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    height: 0;
+    width: 35px;
+    border-top: 10px solid #FFF;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+}
+.seven-segment-small .a.active {
+    border-top-color: #f28484;
+}
+
+.seven-segment-small .b {
+    position: absolute;
+    left: 40px;
+    top: 8px;
+    height: 35px;
+    width: 0;
+    border-right: 10px solid #FFF;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+.seven-segment-small .b.active {
+    border-right-color: #f28484;
+}
+
+.seven-segment-small .c {
+    position: absolute;
+    left: 40px;
+    top: 48px;
+    height: 35px;
+    width: 0;
+    border-right: 10px solid #FFF;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+.seven-segment-small .c.active {
+    border-right-color: #f28484;
+}
+
+.seven-segment-small .d {
+    position: absolute;
+    top: 75px;
+    left: 10px;
+    height: 0;
+    width: 35px;
+    border-bottom: 10px solid #FFF;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+}
+.seven-segment-small .d.active {
+    border-bottom-color: #f28484;
+}
+
+.seven-segment-small .e {
+    position: absolute;
+    left: 5px;
+    top: 48px;
+    height: 35px;
+    width: 0;
+    border-left: 10px solid #FFF;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+.seven-segment-small .e.active {
+    border-left-color: #f28484;
+}
+
+.seven-segment-small .f {
+    position: absolute;
+    left: 5px;
+    top: 8px;
+    height: 35px;
+    width: 0;
+    border-left: 10px solid #FFF;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+.seven-segment-small .f.active {
+    border-left-color: #f28484;
+}
+
+.seven-segment-small .g {
+    position: absolute;
+    top: 40px;
+    left: 15px;
+    -webkit-transform: scale(1.4);
+    -moz-transform: scale(1.4);
+    -ms-transform: scale(1.4);
+    -o-transform: scale(1.4);
+    transform: scale(1.4);
+}
+.seven-segment-small .g .top {
+    height: 0;
+    width: 25px;
+    border-bottom: 5px solid #FFF;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+}
+.seven-segment-small .g .bottom {
+    height: 0;
+    width: 25px;
+    border-top: 5px solid #FFF;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+}
+.seven-segment-small .g.active .top {
+    border-bottom-color: #f28484;
+}
+.seven-segment-small .g.active .bottom {
+    border-top-color: #f28484;
+}
+
+.seven-segment-small .dp {
+    position: absolute;
+    left: 150px;
+    top: 200px;
+    height: 30px;
+    width: 30px;
+    background-color: #FFF;
+    border-radius: 15px;
+}
+.seven-segment-small .dp.active {
+    background-color: #f28484;
+}
