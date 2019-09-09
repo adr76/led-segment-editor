@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head lang="en">
-    <meta name="generator"
-    content="HTML Tidy for HTML5 (experimental) for Windows https://github.com/w3c/tidy-html5/tree/c63cc39" />
     <title>LED Matrix & Segment Editor</title>
     <meta charset="UTF-8" />
-    <meta name="keywords" content="LED matrix, 8x8, matrix editor, matrix animation" />
-    <meta name="description" content="Online matrix editor: create images for LED matrix" />
-    <meta name="author" content="Xantorohara" />
-    <meta name="google-site-verification" content="jiVeWC16vJvb-WaFNr5oYUCvsWpiUpa21_r-zB-tH3E" />
+    <meta name="description" content="Online LED Matrix & Segment Editor: create images for LED matrix" />
+    <meta name="author" content="adr76" />
+    <!-- <meta name="google-site-verification" content="jiVeWC16vJvb-WaFNr5oYUCvsWpiUpa21_r-zB-tH3E" /> -->
     <link rel="icon" type="image/png" href="img/icon.png" />
     <style>
         @media only screen and (min-height: 900px) {
@@ -28,7 +25,7 @@
     <script src="lib/highlight/highlight.pack.js"></script>
     <link rel="stylesheet" type="text/css" href="styles.css?20170904" />
     <script src="scripts.js?20170904"></script>
-    <link href="seven-style.css" rel="stylesheet" type="text/css" />
+    <link href="seven-style.css?20170904" rel="stylesheet" type="text/css" />
   </head>
   <body class="red-leds plain-theme">
     <nav class="navbar navbar-inverse navbar-static-top">
@@ -104,63 +101,7 @@
           <textarea id="output" spellcheck="false" style="width: 100%;"></textarea>
         </div>
         <div id="circuit" class="col-xs-12 col-md-6 col-md-pull-3 text-center debug">
-          <!-- seven-block -->
-          <div id="seven" class="seven">
-            <div id="g1" class="seven-segment">
-              <div id="pixel-1" class="a pixel" data-row="1" data-col="1"></div> 
-              <div id="pixel-2" class="b pixel" data-row="1" data-col="2"></div>
-              <div id="pixel-3" class="c pixel" data-row="1" data-col="3"></div>
-              <div id="pixel-4" class="d pixel" data-row="1" data-col="4"></div>
-              <div id="pixel-5" class="e pixel" data-row="1" data-col="5"></div>
-              <div id="pixel-6" class="f pixel" data-row="1" data-col="6"></div>
-              <div id="pixel-7" class="g pixel" data-row="1" data-col="7">
-                <div class="top"></div>
-                <div class="bottom"></div>
-              </div>
-              <div id="pixel-0" class="dp pixel" data-row="1" data-col="8"></div>
-            </div>
-            <div id="g2" class="seven-segment">
-              <div id="pixel-1" class="a pixel" data-row="2" data-col="1"></div>
-              <div id="pixel-2" class="b pixel" data-row="2" data-col="2"></div>
-              <div id="pixel-3" class="c pixel" data-row="2" data-col="3"></div>
-              <div id="pixel-4" class="d pixel" data-row="2" data-col="4"></div>
-              <div id="pixel-5" class="e pixel" data-row="2" data-col="5"></div>
-              <div id="pixel-6" class="f pixel" data-row="2" data-col="6"></div>
-              <div id="pixel-7" class="g pixel" data-row="2" data-col="7">
-                <div class="top"></div>
-                <div class="bottom"></div>
-              </div>
-              <div id="pixel-0" class="dp pixel" data-row="2" data-col="8"></div>
-            </div>
-            <div id="g3" class="seven-segment">
-              <div id="pixel-1" class="a pixel" data-row="3" data-col="1"></div>
-              <div id="pixel-2" class="b pixel" data-row="3" data-col="2"></div>
-              <div id="pixel-3" class="c pixel" data-row="3" data-col="3"></div>
-              <div id="pixel-4" class="d pixel" data-row="3" data-col="4"></div>
-              <div id="pixel-5" class="e pixel" data-row="3" data-col="5"></div>
-              <div id="pixel-6" class="f pixel" data-row="3" data-col="6"></div>
-              <div id="pixel-7" class="g pixel" data-row="3" data-col="7">
-                <div class="top"></div>
-                <div class="bottom"></div>
-              </div>
-              <div id="pixel-0" class="dp pixel" data-row="3" data-col="8"></div>
-            </div>
-            <div id="g4" class="seven-segment">
-              <div id="pixel-1" class="a pixel" data-row="4" data-col="1"></div>
-              <div id="pixel-2" class="b pixel" data-row="4" data-col="2"></div>
-              <div id="pixel-3" class="c pixel" data-row="4" data-col="3"></div>
-              <div id="pixel-4" class="d pixel" data-row="4" data-col="4"></div>
-              <div id="pixel-5" class="e pixel" data-row="4" data-col="5"></div>
-              <div id="pixel-6" class="f pixel" data-row="4" data-col="6"></div>
-              <div id="pixel-7" class="g pixel" data-row="4" data-col="7">
-                <div class="top"></div>
-                <div class="bottom"></div>
-              </div>
-              <div id="pixel-0" class="dp pixel" data-row="4" data-col="8"></div>
-            </div>
-          </div>
-          <!-- end seven-block -->
-          <table style="display: inline-block; width: 900px">
+          <table style="display: inline-block;">
             <tr>
               <td>
                 <table id="matrix">
@@ -184,20 +125,88 @@
                 </table>
               </td>
               <td>
+                <!-- seven-block -->
+                <div id="seven" class="seven">
+                  <div id="g1" class="seven-segment">
+                    <div class="a pixel" data-row="1" data-col="1"></div> 
+                    <div class="b pixel" data-row="1" data-col="2"></div>
+                    <div class="c pixel" data-row="1" data-col="3"></div>
+                    <div class="d pixel" data-row="1" data-col="4"></div>
+                    <div class="e pixel" data-row="1" data-col="5"></div>
+                    <div class="f pixel" data-row="1" data-col="6"></div>
+                    <div class="g pixel" data-row="1" data-col="7">
+                      <div class="top"></div>
+                      <div class="bottom"></div>
+                    </div>
+                    <div class="dp pixel" data-row="1" data-col="8"></div>
+                  </div>
+                  <div id="g2" class="seven-segment">
+                    <div class="a pixel" data-row="2" data-col="1"></div>
+                    <div class="b pixel" data-row="2" data-col="2"></div>
+                    <div class="c pixel" data-row="2" data-col="3"></div>
+                    <div class="d pixel" data-row="2" data-col="4"></div>
+                    <div class="e pixel" data-row="2" data-col="5"></div>
+                    <div class="f pixel" data-row="2" data-col="6"></div>
+                    <div class="g pixel" data-row="2" data-col="7">
+                      <div class="top"></div>
+                      <div class="bottom"></div>
+                    </div>
+                    <div class="dp pixel" data-row="2" data-col="8"></div>
+                  </div>
+                  <div id="g3" class="seven-segment">
+                    <div class="a pixel" data-row="3" data-col="1"></div>
+                    <div class="b pixel" data-row="3" data-col="2"></div>
+                    <div class="c pixel" data-row="3" data-col="3"></div>
+                    <div class="d pixel" data-row="3" data-col="4"></div>
+                    <div class="e pixel" data-row="3" data-col="5"></div>
+                    <div class="f pixel" data-row="3" data-col="6"></div>
+                    <div class="g pixel" data-row="3" data-col="7">
+                      <div class="top"></div>
+                      <div class="bottom"></div>
+                    </div>
+                    <div id="pixel-0" class="dp pixel" data-row="3" data-col="8"></div>
+                  </div>
+                  <div id="g4" class="seven-segment">
+                    <div class="a pixel" data-row="4" data-col="1"></div>
+                    <div class="b pixel" data-row="4" data-col="2"></div>
+                    <div class="c pixel" data-row="4" data-col="3"></div>
+                    <div class="d pixel" data-row="4" data-col="4"></div>
+                    <div class="e pixel" data-row="4" data-col="5"></div>
+                    <div class="f pixel" data-row="4" data-col="6"></div>
+                    <div class="g pixel" data-row="4" data-col="7">
+                      <div class="top"></div>
+                      <div class="bottom"></div>
+                    </div>
+                    <div class="dp pixel" data-row="4" data-col="8"></div>
+                  </div>
+                </div>
+                <!-- end seven-block -->
                 <div id="player">
                 <label for="play-delay-input" style="padding-right: 10px;">Play</label> 
                 <input id="play-delay-input" type="number" min="100" value="500" /> 
                 <small id="ms">ms.</small> 
                 <button id="play-button">
                 <span id="play-button-play" class="glyphicon glyphicon-play"></span> 
-                <span id="play-button-stop" style="display: none" class="glyphicon glyphicon-stop"></span></button></div>
+                <span id="play-button-stop" style="display: none" class="glyphicon glyphicon-stop"></span></button>
+                </div>
                 <div style="height: 25px;"></div>
                 <div id="shift-buttons-container">
-                <button id="shift-up-button" style="top:10px; left:50px;" title="Shift matrix up"></button> 
-                <button id="shift-right-button" style="top:50px; left:90px;" title="Shift matrix right"></button> 
-                <button id="shift-down-button" style="top:90px; left:50px;" title="Shift matrix down"></button> 
-                <button id="shift-left-button" style="top:50px; left:10px;" title="Shift matrix left"></button> 
-                <button id="invert-button" style="top: 50px; left: 50px;" title="Invert matrix"></button></div>
+                  <button id="shift-up-button" style="top:10px; left:50px;" title="Shift matrix up">
+                      <span class="glyphicon glyphicon-chevron-up"></span>
+                  </button>
+                  <button id="shift-right-button" style="top:50px; left:90px;" title="Shift matrix right">
+                      <span class="glyphicon glyphicon-chevron-right"></span>
+                  </button>
+                  <button id="shift-down-button" style="top:90px; left:50px;" title="Shift matrix down">
+                      <span class="glyphicon glyphicon-chevron-down"></span>
+                  </button>
+                  <button id="shift-left-button" style="top:50px; left:10px;" title="Shift matrix left">
+                      <span class="glyphicon glyphicon-chevron-left"></span>
+                  </button>
+                  <button id="invert-button" style="top: 50px; left: 50px;" title="Invert matrix">
+                      <span class="glyphicon glyphicon-lamp"></span>
+                  </button>
+                </div>
                 <div style="height: 25px;"></div>
               </td>
             </tr>

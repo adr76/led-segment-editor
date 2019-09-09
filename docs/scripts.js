@@ -6,7 +6,7 @@ $(function () {
     var $deleteButton = $('#delete-button');
     var $updateButton = $('#update-button');
 
-    var $leds, $cols, $rows;
+    var $leds, $sleds, $cols, $rows;
 
     var generator = {
         tableCols: function () {
@@ -115,6 +115,7 @@ $(function () {
 
     function ledsToHex() {
         var out = [];
+        
         for (var i = 1; i < 9; i++) {
             var byte = [];
             for (var j = 1; j < 9; j++) {
@@ -139,6 +140,7 @@ $(function () {
             for (var j = 1; j < 9; j++) {
                 var active = !!(byte & 1 << (j - 1));
                 $leds.find('.item[data-row=' + i + '][data-col=' + j + '] ').toggleClass('active', active);
+                //$sleds.find('.pixel[data-row=' + j + '][data-col=' + i + '] ').toggleClass('active', active);
             }
         }
     }
@@ -219,21 +221,27 @@ $(function () {
     $cols = $('#cols-list');
     $rows = $('#rows-list');
     $leds = $('#leds-matrix');
-    
-    //$leds = $('#leds-matrix', '.seven-segment');
-    
-    $seven = $('.seven-segment');
-    //$seven-cols = $('.seven-segment');
-    //$seven-rows = $('.seven-segment');
 
     $leds.find('.item').mousedown(function () {
+        var col = $(this).attr('data-col');
+        var row = $(this).attr('data-row');
+        $sleds.find('.pixel[data-row=' + row + '][data-col=' + col + '] ').toggleClass('active');
         $(this).toggleClass('active');
         ledsToHex();
     });
-    $seven.find('.item').mousedown(function () {
-        $(this).toggleClass('active');
-        ledsToHex();
+    
+    //-- seven-block --  
+    var $sleds = $('.seven-segment');
+    
+    $sleds.find('.pixel').mousedown(function () {
+      $(this).toggleClass('active');
+      var col = $(this).attr('data-col');
+      var row = $(this).attr('data-row');
+      $leds.find('.item[data-row=' + row + '][data-col=' + col + '] ').toggleClass('active');
+      //ledsToHex();
     });
+    
+    //-- end seven-block --
 
     $('#invert-button').click(function () {
         $leds.find('.item').toggleClass('active');
@@ -299,8 +307,6 @@ $(function () {
             $leds.find('.item[data-row=' + row + '].active').length != 8);
         ledsToHex();
     });
-    
-    //-- seven
 
     $hexInput.keyup(function () {
         hexInputToLeds();

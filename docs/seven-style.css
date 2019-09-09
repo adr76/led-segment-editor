@@ -1,4 +1,3 @@
-
 .center-block {
     display: block;
     margin-left: auto;
@@ -16,12 +15,12 @@
 .seven {
 display: block;
     position: absolute;
-    bottom: 5px;
-    left: 10px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 8px;
-    width: 900px;
+    /* top: 5px; */
+    left: 50px;
+    width: 820px;
+    /* margin-left: auto; */
+    /* margin-right: auto; */
+
     /* height: 160px; */
     /* border: 6px solid #484848; */
     background-color: rgba(0,0,0,.5);
@@ -50,7 +49,8 @@ display: block;
     border-right: 30px solid transparent;
 }
 .seven-segment .a.active {
-    border-top-color: #f28484;
+    border-top-color: #f00;
+    cursor: pointer;
 }
 
 .seven-segment .b {
@@ -64,7 +64,8 @@ display: block;
     border-bottom: 30px solid transparent;
 }
 .seven-segment .b.active {
-    border-right-color: #f28484;
+    border-right-color: #f00;
+    cursor: pointer;
 }
 
 .seven-segment .c {
@@ -78,7 +79,8 @@ display: block;
     border-bottom: 30px solid transparent;
 }
 .seven-segment .c.active {
-    border-right-color: #f28484;
+    border-right-color: #f00;
+    cursor: pointer;
 }
 
 .seven-segment .d {
@@ -92,7 +94,8 @@ display: block;
     border-right: 30px solid transparent;
 }
 .seven-segment .d.active {
-    border-bottom-color: #f28484;
+    border-bottom-color: #f00;
+    cursor: pointer;
 }
 
 .seven-segment .e {
@@ -106,7 +109,8 @@ display: block;
     border-bottom: 30px solid transparent;
 }
 .seven-segment .e.active {
-    border-left-color: #f28484;
+    border-left-color: #f00;
+    cursor: pointer;
 }
 
 .seven-segment .f {
@@ -120,7 +124,8 @@ display: block;
     border-bottom: 30px solid transparent;
 }
 .seven-segment .f.active {
-    border-left-color: #f28484;
+    border-left-color: #f00;
+    cursor: pointer;
 }
 
 .seven-segment .g {
@@ -152,10 +157,12 @@ display: block;
     -webkit-box-sizing: border-box;
 }
 .seven-segment .g.active .top {
-    border-bottom-color: #f28484;
+    border-bottom-color: #f00;
+    cursor: pointer;
 }
 .seven-segment .g.active .bottom {
-    border-top-color: #f28484;
+    border-top-color: #f00;
+    cursor: pointer;
 }
 
 .seven-segment .dp {
@@ -168,7 +175,8 @@ display: block;
     border-radius: 15px;
 }
 .seven-segment .dp.active {
-    background-color: #f28484;
+    background-color: #f00;
+    cursor: pointer;
 }
 
 .symbol {
@@ -200,7 +208,8 @@ display: block;
     border-right: 10px solid transparent;
 }
 .seven-segment-small .a.active {
-    border-top-color: #f28484;
+    border-top-color: #f00;
+    cursor: pointer;
 }
 
 .seven-segment-small .b {
@@ -214,7 +223,8 @@ display: block;
     border-bottom: 10px solid transparent;
 }
 .seven-segment-small .b.active {
-    border-right-color: #f28484;
+    border-right-color: #f00;
+    cursor: pointer;
 }
 
 .seven-segment-small .c {
@@ -228,7 +238,8 @@ display: block;
     border-bottom: 10px solid transparent;
 }
 .seven-segment-small .c.active {
-    border-right-color: #f28484;
+    border-right-color: #f00;
+    cursor: pointer;
 }
 
 .seven-segment-small .d {
@@ -242,7 +253,8 @@ display: block;
     border-right: 10px solid transparent;
 }
 .seven-segment-small .d.active {
-    border-bottom-color: #f28484;
+    border-bottom-color: #f00;
+    cursor: pointer;
 }
 
 .seven-segment-small .e {
@@ -256,7 +268,8 @@ display: block;
     border-bottom: 10px solid transparent;
 }
 .seven-segment-small .e.active {
-    border-left-color: #f28484;
+    border-left-color: #f00;
+    cursor: pointer;
 }
 
 .seven-segment-small .f {
@@ -270,7 +283,8 @@ display: block;
     border-bottom: 10px solid transparent;
 }
 .seven-segment-small .f.active {
-    border-left-color: #f28484;
+    border-left-color: #f00;
+    cursor: pointer;
 }
 
 .seven-segment-small .g {
@@ -298,10 +312,11 @@ display: block;
     border-right: 5px solid transparent;
 }
 .seven-segment-small .g.active .top {
-    border-bottom-color: #f28484;
+    border-bottom-color: #f00;
 }
 .seven-segment-small .g.active .bottom {
-    border-top-color: #f28484;
+    border-top-color: #f00;
+    cursor: pointer;
 }
 
 .seven-segment-small .dp {
@@ -314,5 +329,6 @@ display: block;
     border-radius: 15px;
 }
 .seven-segment-small .dp.active {
-    background-color: #f28484;
+    background-color: #f00;
+    cursor: pointer;
 }
